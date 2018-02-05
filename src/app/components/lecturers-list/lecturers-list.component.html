@@ -2,3 +2,18 @@
 <p>
   lecturers-list works!
 </p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>lec</th>
+    <th>id</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let lec of lecturers">
+    <td>{{lec.name}}</td>
+    <td>{{lec.id}}</td>
+  </tr>
+  </tbody>
+</table>
+

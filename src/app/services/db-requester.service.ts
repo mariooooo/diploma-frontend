@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Lecturer} from '../entities/lecturer';
+import { HttpClient } from '@angular/common/http';
+
+import { Lecturer } from '../entities/lecturer';
 
 @Injectable()
 export class DbRequesterService {
+
+  url = 'http://localhost:8080/';
 
   private data: Lecturer[] = [
     { id: 1, name: 'name1', photo: 'p'},
@@ -10,10 +14,13 @@ export class DbRequesterService {
   ];
 
   getData(): Lecturer[] {
-
     return this.data;
   }
 
-  constructor() { }
+  requestData() {
+    return this.http.get(this.url + 'getLecturers/');
+  }
+
+  constructor(private http: HttpClient) { }
 
 }

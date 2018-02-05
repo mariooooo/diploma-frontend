@@ -13,7 +13,8 @@ export class LecturersListComponent implements OnInit {
   constructor(private dbService: DbRequesterService) { }
 
   ngOnInit() {
-    this.lecturers = this.dbService.getData();
+    this.dbService.requestData().subscribe(data => this.lecturers = data); // ignore type warning here, it's working
+    console.log('response: ' + this.lecturers);
   }
 
 }

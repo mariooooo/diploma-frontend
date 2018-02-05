@@ -9,7 +9,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LecturersListComponent } from './components/lecturers-list/lecturers-list.component';
 
-const appRoutes: Routes =[
+import { DbRequesterService} from './services/db-requester.service';
+
+const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'lecturers', component: LecturersListComponent}
   // { path: '**', component: NotFoundComponent }
@@ -27,7 +29,7 @@ const appRoutes: Routes =[
     MatButtonModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [DbRequesterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

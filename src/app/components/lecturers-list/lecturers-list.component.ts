@@ -10,11 +10,12 @@ import { DbRequesterService } from '../../services/db-requester.service';
 export class LecturersListComponent implements OnInit {
   // lecturers: any[] = [];
   lecturers: any; // ad-hoc to stop IDE spellchecker fuck my mind
+
   constructor(private dbService: DbRequesterService) { }
 
   ngOnInit() {
-    this.dbService.requestData().subscribe(data => this.lecturers = data); // ignore type warning here, it's working
-    console.log('response: ' + this.lecturers);
+    this.dbService.requestGetLecturers().subscribe(data => this.lecturers = data); // ignore type warning here, it's working
+    // console.log('response: ' + this.lecturers);
   }
 
 }

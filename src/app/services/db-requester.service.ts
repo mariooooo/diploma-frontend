@@ -8,17 +8,21 @@ export class DbRequesterService {
 
   url = 'http://localhost:8080/';
 
-  private data: Lecturer[] = [
-    { id: 1, name: 'name1', photo: 'p'},
-    { id: 2, name: 'name2', photo: '2'}
-  ];
+  // private data: Lecturer[] = [
+  //   { id: 1, name: 'name1', photo: 'p'},
+  //   { id: 2, name: 'name2', photo: '2'}
+  // ];
+  //
+  // getData(): Lecturer[] {
+  //   return this.data;
+  // }
 
-  getData(): Lecturer[] {
-    return this.data;
+  requestGetLecturers() {
+    return this.http.get(this.url + 'getLecturers/');
   }
 
-  requestData() {
-    return this.http.get(this.url + 'getLecturers/');
+  requestGetLecturerById(id: number) {
+    return this.http.get(this.url + 'getStats/lec/' + id);
   }
 
   constructor(private http: HttpClient) { }

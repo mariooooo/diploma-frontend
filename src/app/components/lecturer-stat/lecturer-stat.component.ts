@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { DbRequesterService } from '../../services/db-requester.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-lecturer-stat',
@@ -9,16 +10,13 @@ import { DbRequesterService } from '../../services/db-requester.service';
 })
 export class LecturerStatComponent implements OnInit {
 
-  id: number;
   lecturerStat;
 
-  constructor(private activateRoute: ActivatedRoute, private dbService: DbRequesterService) {
-    this.id = activateRoute.snapshot.params['id'];
-  }
+  constructor ( private dbService: DbRequesterService,
+                public dialogRef: MatDialogRef<LecturerStatComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   ngOnInit() {
-    // this.dbService.requestGetLecturers().subscribe(data => this.lecturers = data);
-    this.dbService.requestGetLecturerById(this.id).subscribe(data => this.lecturerStat = data);
+     this.dbService.requestGetLecturerById(this.data.id).subscribe(data => this.lecturerStat = data);
   }
 
 }

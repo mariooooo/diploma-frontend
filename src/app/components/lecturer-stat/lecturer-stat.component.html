@@ -1,6 +1,6 @@
-<p>
-  lecturer-stat works! {{id}}
-</p>
-<div class="card-container" *ngFor="let s of lecturerStat">
-{{s.subjName}}
+<div class = "dialog">
+  <mat-list role="list" *ngFor="let s of lecturerStat">
+    <mat-list-item role="listitem">{{s.subjName}}</mat-list-item>
+  </mat-list>
 </div>
+

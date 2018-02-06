@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatListModule} from '@angular/material/list';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -34,6 +37,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
+    MatListModule,
+    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule
   ],

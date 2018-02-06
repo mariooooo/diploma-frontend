@@ -1,0 +1,9 @@
+.example-card {
+  max-width: 200px;
+  /*max-height: 200px;*/
+  margin: 20px;
+}
+
+.card-container {
+  display: inline-block;
+}

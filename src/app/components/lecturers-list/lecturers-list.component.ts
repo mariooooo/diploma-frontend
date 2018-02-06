@@ -8,8 +8,8 @@ import { DbRequesterService } from '../../services/db-requester.service';
   styleUrls: ['./lecturers-list.component.css']
 })
 export class LecturersListComponent implements OnInit {
-  lecturers: Lecturer[] = [];
-
+  // lecturers: any[] = [];
+  lecturers: any; // ad-hoc to stop IDE spellchecker fuck my mind
   constructor(private dbService: DbRequesterService) { }
 
   ngOnInit() {

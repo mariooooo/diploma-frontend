@@ -1,19 +1,16 @@
 <app-header></app-header>
-<p>
-  lecturers-list works!
-</p>
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>lec</th>
-    <th>id</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let lec of lecturers">
-    <td>{{lec.name}}</td>
-    <td>{{lec.id}}</td>
-  </tr>
-  </tbody>
-</table>
+
+<div class="card-container" *ngFor="let lec of lecturers">
+  <mat-card class="example-card" >
+    <img mat-card-image src="{{lec.photo}}">
+    <mat-card-content>
+      <p>
+        {{lec.name}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Get stats</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 

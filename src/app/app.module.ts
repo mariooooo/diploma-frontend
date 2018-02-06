@@ -13,10 +13,12 @@ import { HomeComponent } from './components/home/home.component';
 import { LecturersListComponent } from './components/lecturers-list/lecturers-list.component';
 
 import { DbRequesterService} from './services/db-requester.service';
+import { LecturerStatComponent } from './components/lecturer-stat/lecturer-stat.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'lecturers', component: LecturersListComponent}
+  { path: 'lecturers', component: LecturersListComponent},
+  { path: 'lecturer-stat/:id', component : LecturerStatComponent }
   // { path: '**', component: NotFoundComponent }
 ];
 
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    LecturersListComponent
+    LecturersListComponent,
+    LecturerStatComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

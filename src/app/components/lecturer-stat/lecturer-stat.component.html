@@ -1,6 +1,21 @@
 <div class = "dialog">
-  <mat-list role="list" *ngFor="let s of lecturerStat">
-    <mat-list-item role="listitem">{{s.subjName}}</mat-list-item>
-  </mat-list>
+  <!--<mat-list role="list" *ngFor="let s of lecturerStat">-->
+    <!--<mat-list-item role="listitem">{{s.subjName}}</mat-list-item>-->
+  <!--</mat-list>-->
+  <mat-accordion *ngFor="let s of lecturerStat">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{s.subjName}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <!--attendance {{s.attendance / s.actualGroupSize * 100 }} %-->
+          attendance {{ (s.attendance / s.actualGroupSize * 100) | round}} %
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-progress-bar mode="determinate" value="{{s.attendance / s.actualGroupSize * 100}}"></mat-progress-bar>
+      <p>attendance {{s.attendance}}, actualGroupSize {{s.actualGroupSize}}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
 

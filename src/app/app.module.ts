@@ -10,6 +10,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+import { NgMathPipesModule } from 'angular-pipes';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -39,9 +43,12 @@ const appRoutes: Routes = [
     MatCardModule,
     MatDialogModule,
     MatListModule,
+    MatExpansionModule,
+    MatProgressBarModule,
     BrowserAnimationsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgMathPipesModule
   ],
   providers: [DbRequesterService],
   bootstrap: [AppComponent]

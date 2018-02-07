@@ -10,7 +10,7 @@
     </mat-card-content>
     <mat-card-actions>
       <!--<a mat-button routerLink="/lecturer-stat/{{lec.id}}">Get stats</a>-->
-      <button mat-raised-button (click)="openDialog(lec.id)">Get stats</button>
+      <button mat-raised-button (click)="openDialog(lec.id, lec.name)">Get stats</button>
     </mat-card-actions>
   </mat-card>
 </div>

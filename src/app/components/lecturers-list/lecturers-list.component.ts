@@ -20,9 +20,9 @@ export class LecturersListComponent implements OnInit {
     // console.log('response: ' + this.lecturers);
   }
 
-  openDialog(id: number): void {
+  openDialog(id: number, name: string): void {
     const dialogRef = this.dialog.open(LecturerStatComponent, {
-      data: { id: id }
+      data: { id: id, name: name }
     });
     dialogRef.afterClosed().subscribe();
     console.log(id);

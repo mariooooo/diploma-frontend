@@ -11,6 +11,7 @@
     <ng-template matExpansionPanelContent>
       <div *ngFor="let gg of gr">
       <p>{{gg.name}}</p>
+        <button mat-raised-button class = "btn" (click)="openDialog(gg.id, gg.name)">Get stats</button>
       </div>
     </ng-template>
   </mat-expansion-panel>

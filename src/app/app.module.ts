@@ -24,6 +24,7 @@ import { LecturersListComponent } from './components/lecturers-list/lecturers-li
 import { DbRequesterService} from './services/db-requester.service';
 import { LecturerStatComponent } from './components/lecturer-stat/lecturer-stat.component';
 import { GroupsComponent } from './components/groups/groups.component';
+import { StudentStatComponent } from './components/student-stat/student-stat.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LecturersListComponent,
     LecturerStatComponent,
-    GroupsComponent
+    GroupsComponent,
+    StudentStatComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -57,6 +59,7 @@ const appRoutes: Routes = [
     NgMathPipesModule
   ],
   providers: [DbRequesterService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StudentStatComponent]
 })
 export class AppModule { }

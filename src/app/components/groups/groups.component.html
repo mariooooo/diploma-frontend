@@ -11,10 +11,12 @@
     <ng-template matExpansionPanelContent>
       <table class="tb" >
         <tr>
-          <td><div id = "blk"></div></td>
+          <td><div class = "blk"></div></td>
+          <td><div class = "blk"></div></td>
           <td></td>
         </tr>
         <tr *ngFor="let gg of gr">
+          <td></td>
           <td>{{gg.name}}</td>
           <td><button mat-raised-button class = "btn" (click)="openDialog(gg.id, gg.name)">Get stats</button></td>
         </tr>

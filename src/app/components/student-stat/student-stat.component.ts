@@ -11,6 +11,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 export class StudentStatComponent implements OnInit {
 
   studentStat: any;
+  displayedColumns = ['subject', 'lecturer', 'date', 'lessonNumber', 'attendance'];
+
   constructor( private dbService: DbRequesterService,
                public dialogRef: MatDialogRef<LecturerStatComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
 

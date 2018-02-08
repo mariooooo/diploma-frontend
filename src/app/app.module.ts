@@ -14,6 +14,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 
 import { NgMathPipesModule } from 'angular-pipes';
 
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     MatProgressBarModule,
     MatTabsModule,
     MatIconModule,
+    MatTableModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,

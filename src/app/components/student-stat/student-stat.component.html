@@ -2,10 +2,47 @@
   <p>
     {{data.name}}
   </p>
-  <div *ngFor="let s of studentStat">
-    {{s.subject}}
-    {{s.lecturer}}
-    {{s.date}}
-  </div>
+  <!--<div *ngFor="let s of studentStat">-->
+    <!--{{s.subject}}-->
+    <!--{{s.lecturer}}-->
+    <!--{{s.date}}-->
+    <!--{{s.lessonNumber}}-->
+    <!--{{s.attendance}}-->
+  <!--</div>-->
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="studentStat">
+
+    <ng-container matColumnDef="subject">
+      <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
+      <mat-cell *matCellDef="let s"> {{s.subject}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lecturer">
+      <mat-header-cell *matHeaderCellDef> Lecturer </mat-header-cell>
+      <mat-cell *matCellDef="let s"> {{s.lecturer}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let s"> {{s.date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lessonNumber">
+      <mat-header-cell *matHeaderCellDef> Lesson Number </mat-header-cell>
+      <mat-cell *matCellDef="let s"> {{s.lessonNumber}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="attendance">
+      <mat-header-cell *matHeaderCellDef> Attendance </mat-header-cell>
+      <mat-cell *matCellDef="let s"> <mat-icon *ngIf="s.attendance; else unset">done</mat-icon>
+        <ng-template #unset><mat-icon>clear</mat-icon></ng-template>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 </div>
 
+</div>

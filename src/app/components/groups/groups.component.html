@@ -9,10 +9,16 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <ng-template matExpansionPanelContent>
-      <div *ngFor="let gg of gr">
-      <p>{{gg.name}}</p>
-        <button mat-raised-button class = "btn" (click)="openDialog(gg.id, gg.name)">Get stats</button>
-      </div>
+      <table class="tb" >
+        <tr>
+          <td><div id = "blk"></div></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let gg of gr">
+          <td>{{gg.name}}</td>
+          <td><button mat-raised-button class = "btn" (click)="openDialog(gg.id, gg.name)">Get stats</button></td>
+        </tr>
+      </table>
     </ng-template>
   </mat-expansion-panel>
 

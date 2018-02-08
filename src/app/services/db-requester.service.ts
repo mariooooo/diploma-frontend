@@ -24,6 +24,10 @@ export class DbRequesterService {
     return this.http.get(this.url + 'getStudents/' + id);
   }
 
+  requestGetStudentById(id: number) {
+    return this.http.get(this.url + 'getStats/stud/' + id);
+  }
+
   constructor(private http: HttpClient) { }
 
 }

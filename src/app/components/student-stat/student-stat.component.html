@@ -1,6 +1,11 @@
 <div class = "dialog">
   <p>
-    student-stat works! {{data.name}}
+    {{data.name}}
   </p>
+  <div *ngFor="let s of studentStat">
+    {{s.subject}}
+    {{s.lecturer}}
+    {{s.date}}
+  </div>
 </div>
 

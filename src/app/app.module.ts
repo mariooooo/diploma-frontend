@@ -27,7 +27,7 @@ import { GroupsComponent } from './components/groups/groups.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'lecturers', component: LecturersListComponent},
+  { path: 'groups', component: GroupsComponent},
   { path: 'lecturer-stat/:id', component : LecturerStatComponent }
   // { path: '**', component: NotFoundComponent }
 ];

@@ -12,6 +12,8 @@ import {MatListModule} from '@angular/material/list';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
 
 import { NgMathPipesModule } from 'angular-pipes';
 
@@ -21,6 +23,7 @@ import { LecturersListComponent } from './components/lecturers-list/lecturers-li
 
 import { DbRequesterService} from './services/db-requester.service';
 import { LecturerStatComponent } from './components/lecturer-stat/lecturer-stat.component';
+import { GroupsComponent } from './components/groups/groups.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -35,7 +38,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     LecturersListComponent,
-    LecturerStatComponent
+    LecturerStatComponent,
+    GroupsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -45,6 +49,8 @@ const appRoutes: Routes = [
     MatListModule,
     MatExpansionModule,
     MatProgressBarModule,
+    MatTabsModule,
+    MatIconModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
